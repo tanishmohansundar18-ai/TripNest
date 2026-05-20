@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>TripNest</title>
+
+    <link rel="stylesheet"
+    href="style.css">
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <!-- NAVBAR -->
+
+        <nav>
+
+            <div class="logo">
+
+                TripNest
+
+            </div>
+
+            <ul>
+
+                <li>Flights</li>
+                <li>Hotels</li>
+                <li>Villas</li>
+                <li>Packages</li>
+                <li>Experiences</li>
+
+            </ul>
+
+            <button class="login-btn">
+
+                Login
+
+            </button>
+
+        </nav>
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+
+            <p class="top-text">
+
+                EXPLORE • DISCOVER • EXPERIENCE
+
+            </p>
+
+            <h1>
+
+                Your Journey <br>
+                Begins Here
+
+            </h1>
+
+            <p class="hero-para">
+
+                Book luxury stays,
+                dream vacations,
+                premium villas,
+                flights and unforgettable experiences
+                with TripNest.
+
+            </p>
+
+        </div>
+
+        <!-- BOOKING BOX -->
+
+        <div class="booking-box">
+
+            <!-- MENU -->
+
+            <div class="booking-menu">
+
+                <div class="menu-item active-menu">
+
+                    ✈️ Flights
+
+                </div>
+
+                <div class="menu-item">
+
+                    🏨 Hotels
+
+                </div>
+
+                <div class="menu-item">
+
+                    🏖️ Villas
+
+                </div>
+
+                <div class="menu-item">
+
+                    🚖 Cabs
+
+                </div>
+
+                <div class="menu-item">
+
+                    🎒 Packages
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+
+            <div class="booking-grid">
+
+                <div class="input-box">
+
+                    <label>From</label>
+
+                    <input type="text"
+                    id="from"
+                    placeholder="Delhi">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>To</label>
+
+                    <input type="text"
+                    id="to"
+                    placeholder="Maldives">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Departure</label>
+
+                    <input type="date"
+                    id="departure">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Return</label>
+
+                    <input type="date"
+                    id="returnDate">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Travellers</label>
+
+                    <input type="number"
+                    id="travellers"
+                    placeholder="1">
+
+                </div>
+
+            </div>
+
+            <button class="search-btn"
+            onclick="showReceipt()">
+
+                SEARCH
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- POPULAR DESTINATIONS -->
+
+    <section class="destinations">
+
+        <h2>Trending Destinations</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200">
+
+                <div class="card-content">
+
+                    <h3>Maldives</h3>
+
+                    <p>Luxury Water Villas</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200">
+
+                <div class="card-content">
+
+                    <h3>Tokyo</h3>
+
+                    <p>Futuristic City Escapes</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200">
+
+                <div class="card-content">
+
+                    <h3>London</h3>
+
+                    <p>Royal Luxury Stays</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OFFERS -->
+
+    <section class="offers">
+
+        <h2>Special Offers</h2>
+
+        <div class="offer-grid">
+
+            <div class="offer-card">
+
+                <h3>20% OFF</h3>
+
+                <p>On Maldives Luxury Villas</p>
+
+            </div>
+
+            <div class="offer-card">
+
+                <h3>FREE BREAKFAST</h3>
+
+                <p>On Premium City Hotels</p>
+
+            </div>
+
+            <div class="offer-card">
+
+                <h3>FLAT $100 OFF</h3>
+
+                <p>International Packages</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCES -->
+
+    <section class="experiences">
+
+        <h2>Premium Experiences</h2>
+
+        <div class="experience-grid">
+
+            <div class="experience-card">
+
+                🌊
+
+                <h3>Private Beaches</h3>
+
+            </div>
+
+            <div class="experience-card">
+
+                🍷
+
+                <h3>Fine Dining</h3>
+
+            </div>
+
+            <div class="experience-card">
+
+                🛥️
+
+                <h3>Luxury Yacht</h3>
+
+            </div>
+
+            <div class="experience-card">
+
+                🧘
+
+                <h3>Spa & Wellness</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RECEIPT MODAL -->
+
+    <div class="modal"
+    id="receiptModal">
+
+        <div class="modal-box">
+
+            <h2>Booking Receipt</h2>
+
+            <div id="receiptContent"></div>
+
+            <button onclick="closeModal()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
