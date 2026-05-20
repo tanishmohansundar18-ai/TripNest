@@ -3,352 +3,414 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+<title>TripNest</title>
 
-    <title>TripNest</title>
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-    href="style.css">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-    href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-    <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- HERO -->
+<!-- NAVBAR -->
 
-    <section class="hero">
+<nav>
 
-        <div class="overlay"></div>
+<div class="logo">
 
-        <!-- NAVBAR -->
+TripNest
 
-        <nav>
+</div>
 
-            <div class="logo">
+<ul>
 
-                TripNest
+<li onclick="showFlights()">
 
-            </div>
+Flights
 
-            <ul>
+</li>
 
-                <li>Flights</li>
-                <li>Hotels</li>
-                <li>Villas</li>
-                <li>Packages</li>
-                <li>Experiences</li>
+<li onclick="showHotels()">
 
-            </ul>
+Hotels
 
-            <button class="login-btn">
+</li>
 
-                Login
+<li onclick="showPackages()">
 
-            </button>
+Packages
 
-        </nav>
+</li>
 
-        <!-- HERO CONTENT -->
+</ul>
 
-        <div class="hero-content">
+<button class="login-btn"
+onclick="openLogin()">
 
-            <p class="top-text">
+Login
 
-                EXPLORE • DISCOVER • EXPERIENCE
+</button>
 
-            </p>
+</nav>
 
-            <h1>
+<!-- HERO -->
 
-                Your Journey <br>
-                Begins Here
+<section class="hero">
 
-            </h1>
+<div class="overlay"></div>
 
-            <p class="hero-para">
+<div class="hero-content">
 
-                Book luxury stays,
-                dream vacations,
-                premium villas,
-                flights and unforgettable experiences
-                with TripNest.
+<p class="top-text">
 
-            </p>
+EXPLORE • DISCOVER • EXPERIENCE
 
-        </div>
+</p>
 
-        <!-- BOOKING BOX -->
+<h1>
 
-        <div class="booking-box">
+Travel The World <br>
+With TripNest
 
-            <!-- MENU -->
+</h1>
 
-            <div class="booking-menu">
+<p class="hero-para">
 
-                <div class="menu-item active-menu">
+Flights, luxury hotels,
+vacation packages and
+dream experiences.
 
-                    ✈️ Flights
+</p>
 
-                </div>
+</div>
 
-                <div class="menu-item">
+<!-- FLIGHTS BOX -->
 
-                    🏨 Hotels
+<div class="booking-box"
+id="flightBox">
 
-                </div>
+<h2>
 
-                <div class="menu-item">
+✈️ Search Flights
 
-                    🏖️ Villas
+</h2>
 
-                </div>
+<div class="booking-grid">
 
-                <div class="menu-item">
+<div class="input-box">
 
-                    🚖 Cabs
+<label>From</label>
 
-                </div>
+<input type="text"
+id="from"
+placeholder="Bengaluru">
 
-                <div class="menu-item">
+</div>
 
-                    🎒 Packages
+<div class="input-box">
 
-                </div>
+<label>Destination Country</label>
 
-            </div>
+<select id="destination">
 
-            <!-- FORM -->
+<option>United States - JFK Airport</option>
+<option>United Kingdom - Heathrow Airport</option>
+<option>Japan - Haneda Airport</option>
+<option>Singapore - Changi Airport</option>
+<option>France - Charles De Gaulle</option>
+<option>Australia - Sydney Airport</option>
+<option>UAE - Dubai International</option>
+<option>Qatar - Hamad International</option>
+<option>Thailand - Suvarnabhumi Airport</option>
+<option>Maldives - Velana Airport</option>
 
-            <div class="booking-grid">
+</select>
 
-                <div class="input-box">
+</div>
 
-                    <label>From</label>
+<div class="input-box">
 
-                    <input type="text"
-                    id="from"
-                    placeholder="Delhi">
+<label>Departure Date</label>
 
-                </div>
+<input type="date"
+id="departure">
 
-                <div class="input-box">
+</div>
 
-                    <label>To</label>
+<div class="input-box">
 
-                    <input type="text"
-                    id="to"
-                    placeholder="Maldives">
+<label>Return Flight?</label>
 
-                </div>
+<select id="returnOption">
 
-                <div class="input-box">
+<option>Yes</option>
+<option>No</option>
 
-                    <label>Departure</label>
+</select>
 
-                    <input type="date"
-                    id="departure">
+</div>
 
-                </div>
+<div class="input-box">
 
-                <div class="input-box">
+<label>Return Date</label>
 
-                    <label>Return</label>
+<input type="date"
+id="returnDate">
 
-                    <input type="date"
-                    id="returnDate">
+</div>
 
-                </div>
+<div class="input-box">
 
-                <div class="input-box">
+<label>Travellers</label>
 
-                    <label>Travellers</label>
+<input type="number"
+id="travellers"
+placeholder="1">
 
-                    <input type="number"
-                    id="travellers"
-                    placeholder="1">
+</div>
 
-                </div>
+</div>
 
-            </div>
+<button class="search-btn"
+onclick="searchFlights()">
 
-            <button class="search-btn"
-            onclick="showReceipt()">
+Search Flights
 
-                SEARCH
+</button>
 
-            </button>
+</div>
 
-        </div>
+<!-- HOTELS -->
 
-    </section>
+<div class="booking-box hidden"
+id="hotelBox">
 
-    <!-- POPULAR DESTINATIONS -->
+<h2>
 
-    <section class="destinations">
+🏨 Zenvista Hotels
 
-        <h2>Trending Destinations</h2>
+</h2>
 
-        <div class="card-container">
+<div class="hotel-grid">
 
-            <div class="card">
+<div class="hotel-card">
 
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200">
+<h3>Zenvista Maldives</h3>
 
-                <div class="card-content">
+<p>Luxury Water Villas</p>
 
-                    <h3>Maldives</h3>
+<button onclick="bookHotel(
+'Zenvista Maldives',
+220
+)">
 
-                    <p>Luxury Water Villas</p>
+Book
 
-                </div>
+</button>
 
-            </div>
+</div>
 
-            <div class="card">
+<div class="hotel-card">
 
-                <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200">
+<h3>Zenvista Tokyo</h3>
 
-                <div class="card-content">
+<p>Premium City Hotel</p>
 
-                    <h3>Tokyo</h3>
+<button onclick="bookHotel(
+'Zenvista Tokyo',
+180
+)">
 
-                    <p>Futuristic City Escapes</p>
+Book
 
-                </div>
+</button>
 
-            </div>
+</div>
 
-            <div class="card">
+<div class="hotel-card">
 
-                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200">
+<h3>Zenvista London</h3>
 
-                <div class="card-content">
+<p>Royal Luxury Stay</p>
 
-                    <h3>London</h3>
+<button onclick="bookHotel(
+'Zenvista London',
+250
+)">
 
-                    <p>Royal Luxury Stays</p>
+Book
 
-                </div>
+</button>
 
-            </div>
+</div>
 
-        </div>
+<div class="hotel-card">
 
-    </section>
+<h3>Zenvista Mauritius</h3>
 
-    <!-- OFFERS -->
+<p>Beach Paradise Resort</p>
 
-    <section class="offers">
+<button onclick="bookHotel(
+'Zenvista Mauritius',
+210
+)">
 
-        <h2>Special Offers</h2>
+Book
 
-        <div class="offer-grid">
+</button>
 
-            <div class="offer-card">
+</div>
 
-                <h3>20% OFF</h3>
+</div>
 
-                <p>On Maldives Luxury Villas</p>
+</div>
 
-            </div>
+<!-- PACKAGES -->
 
-            <div class="offer-card">
+<div class="booking-box hidden"
+id="packageBox">
 
-                <h3>FREE BREAKFAST</h3>
+<h2>
 
-                <p>On Premium City Hotels</p>
+🎒 TripNest Packages
 
-            </div>
+</h2>
 
-            <div class="offer-card">
+<div class="hotel-grid">
 
-                <h3>FLAT $100 OFF</h3>
+<div class="hotel-card">
 
-                <p>International Packages</p>
+<h3>European Escape</h3>
 
-            </div>
+<p>France + Italy + Switzerland</p>
 
-        </div>
+<button>
 
-    </section>
+$1800
 
-    <!-- EXPERIENCES -->
+</button>
 
-    <section class="experiences">
+</div>
 
-        <h2>Premium Experiences</h2>
+<div class="hotel-card">
 
-        <div class="experience-grid">
+<h3>Asian Adventure</h3>
 
-            <div class="experience-card">
+<p>Tokyo + Singapore + Thailand</p>
 
-                🌊
+<button>
 
-                <h3>Private Beaches</h3>
+$1400
 
-            </div>
+</button>
 
-            <div class="experience-card">
+</div>
 
-                🍷
+<div class="hotel-card">
 
-                <h3>Fine Dining</h3>
+<h3>Island Paradise</h3>
 
-            </div>
+<p>Maldives + Mauritius</p>
 
-            <div class="experience-card">
+<button>
 
-                🛥️
+$2200
 
-                <h3>Luxury Yacht</h3>
+</button>
 
-            </div>
+</div>
 
-            <div class="experience-card">
+</div>
 
-                🧘
+</div>
 
-                <h3>Spa & Wellness</h3>
+</section>
 
-            </div>
+<!-- RESULTS -->
 
-        </div>
+<section class="results">
 
-    </section>
+<h2>
 
-    <!-- RECEIPT MODAL -->
+Available Flights
 
-    <div class="modal"
-    id="receiptModal">
+</h2>
 
-        <div class="modal-box">
+<div id="flightResults"
+class="flight-results">
 
-            <h2>Booking Receipt</h2>
+</div>
 
-            <div id="receiptContent"></div>
+</section>
 
-            <button onclick="closeModal()">
+<!-- LOGIN MODAL -->
 
-                Close
+<div class="modal"
+id="loginModal">
 
-            </button>
+<div class="modal-box">
 
-        </div>
+<h2>
 
-    </div>
+Login To TripNest
+
+</h2>
+
+<input type="text"
+placeholder="Username"
+id="username">
+
+<input type="password"
+placeholder="Password"
+id="password">
+
+<button onclick="loginUser()">
+
+Login
+
+</button>
+
+</div>
+
+</div>
+
+<!-- RECEIPT MODAL -->
+
+<div class="modal"
+id="receiptModal">
+
+<div class="modal-box">
+
+<h2>
+
+Booking Receipt
+
+</h2>
+
+<div id="receiptContent"></div>
+
+<button onclick="closeReceipt()">
+
+Close
+
+</button>
+
+</div>
+
+</div>
 
 <script src="script.js"></script>
 
